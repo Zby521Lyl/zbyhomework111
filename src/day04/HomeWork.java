@@ -7,20 +7,20 @@ import java.util.Scanner;
 public class HomeWork {
         public static void main(String[] args){
             //test();
-            demo2();
-            //demo1(demo());
+            //demo2();
+            demo1(demo());
         }
 
         private static void demo1(int[] num) {
             int j=0,k=0;
             int[] numJ = new int[8];
             int[] numO = new int[8];
-            for(int i=0;i<num.length;i++){
-                if(num[i]%2 == 0){
-                    numO[j] = num[i];
+            for (int value : num) {
+                if (value % 2 == 0) {
+                    numO[j] = value;
                     j++;
-                }else{
-                    numJ[k] = num[i];
+                } else {
+                    numJ[k] = value;
                     k++;
                 }
             }
@@ -40,36 +40,30 @@ public class HomeWork {
                         System.out.print(numJ[j] + "\t");
                         j++;
                     }
-                    if( k < numO.length){
-                        System.out.print(numO[k] + "\t");
-                        k++;
-                    }
-                }else{
-                    if( k < numO.length){
-                        System.out.print(numO[k] + "\t");
-                        k++;
-                    }
+                }else {
+                    System.out.print(numO[k] + "\t");
+                    k++;
                 }
             }
         }
 
         private static void test() {
                 int[][] arr = {{1,2,3,},{4,5,6}};
-                for(int i = 0;i<arr.length;i++){
-                    for(int j=0;j<arr[i].length;j++){
-                        System.out.print(arr[i][j]+"\t");
-                    }
-                    System.out.println();
+            for (int[] ints : arr) {
+                for (int anInt : ints) {
+                    System.out.print(anInt + "\t");
                 }
+                System.out.println();
+            }
             }
 
         private static int[] demo() {
                 Scanner sc = new Scanner(System.in);
                 int[] nums = new int[8];
-                do{System.out.println("请输入8个整数数字");
+                System.out.println("请输入8个整数数字");
                 for(int i = 0;i < 8;i++){
                     nums[i] = sc.nextInt();
-                }}while(false);
+                }
                 //不会从键盘输出浮点变整数
                 System.out.println(Arrays.toString(nums));
                 return nums;
