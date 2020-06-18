@@ -4,8 +4,8 @@ public class HomeWork {
     public static void main(String[] args){
         //print();
         //System.out.println("\r");
-        //print1(7);
-        sHMath(100);
+        print1(7);
+        //sHMath(100);
     }
 
     private static void print1(int g) {
